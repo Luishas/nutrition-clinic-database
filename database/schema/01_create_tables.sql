@@ -37,3 +37,20 @@ CREATE TABLE Appointment (
     CONSTRAINT FK_Appointment_Nutritionist
         FOREIGN KEY (nutritionistID) REFERENCES Nutritionist(nutritionistID)
 );
+
+-- TABLE: NutritionPlan 
+
+CREATE TABLE NutriPlan (
+    planID INT IDENTITY(1,1) PRIMARY KEY,
+    patientID INT NOT NULL,
+    nutritionistID INT NOT NULL,
+    startDate DATE NOT NULL,
+    endDate DATE,
+    goal NVARCHAR(200),
+
+    CONSTRAINT FK_NutriPlan_Patient
+        FOREIGN KEY (patientID) REFERENCES Patient(patientID),
+    
+    CONsTRAINT FK_NutriPlan_Nutritionist
+        FOREIGN KEY (nutritionistID) REFERENCES Nutritionist(nutritionistID)        
+);
