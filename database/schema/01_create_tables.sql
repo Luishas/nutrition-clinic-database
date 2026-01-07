@@ -1,4 +1,4 @@
--- Table: Patient
+-- TABLE: Patient
 
 CREATE TABLE Patient (
     patientID INT IDENTITY(1,1) PRIMARY KEY,
@@ -10,7 +10,7 @@ CREATE TABLE Patient (
     email NVARCHAR(100) UNIQUE
 );
 
--- Table: Nutritionist 
+-- TABLE: Nutritionist 
 
 CREATE TABLE Nutritionist (
     nutritionistID INT IDENTITY(1,1) PRIMARY KEY,
@@ -19,4 +19,21 @@ CREATE TABLE Nutritionist (
     licenseNumber NVARCHAR(30) NOT NULL UNIQUE,
     phone NVARCHAR(20),
     email NVARCHAR(100) UNIQUE
+);
+
+-- TABLE: Appointment
+
+CREATE TABLE Appointment (
+    appointmentID INT IDENTITY (1,1) PRIMARY KEY,
+    patientID INT NOT NULL,
+    nutritionistID INT NOT NULL,
+    appointmentDate DATETIME NOT NULL,
+    reason NVARCHAR(200),
+    status NVARCHAR(20) CHECK (status IN('Scheduled','Completed','Cancelled')),
+
+    CONSTRAINT FK_Appointment_Patient
+        FOREIGN KEY (patientID) REFERENCES Patient(patientID),
+    
+    CONSTRAINT FK_Appointment_Nutritionist
+        FOREIGN KEY (nutritionistID) REFERENCES Nutritionist(nutritionistID)
 );
