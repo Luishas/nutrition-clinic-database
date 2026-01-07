@@ -51,6 +51,19 @@ CREATE TABLE NutriPlan (
     CONSTRAINT FK_NutriPlan_Patient
         FOREIGN KEY (patientID) REFERENCES Patient(patientID),
     
-    CONsTRAINT FK_NutriPlan_Nutritionist
+    CONSTRAINT FK_NutriPlan_Nutritionist
         FOREIGN KEY (nutritionistID) REFERENCES Nutritionist(nutritionistID)        
+);
+
+-- TABLE: Payment
+
+CREATE TABLE Payment(
+    paymentID INT IDENTITY(1,1) PRIMARY KEY,
+    appointmentID INT NOT NULL,
+    amount DECIMAL(10,2) NOT NULL,
+    payDate DATETIME NOT NULL,
+    payMethod NVARCHAR(50) NOT NULL,
+
+    CONSTRAINT FK_Payment_Appointment
+        FOREIGN KEY (appointmentID) REFERENCES Appointment(appointmentID)
 );
