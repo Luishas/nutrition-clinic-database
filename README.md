@@ -4,7 +4,7 @@ This project implements a relational database for a nutritional clinic, designed
 
 It demonstrates database design, data integrity, performance considerations, and automation through constraints, indexes, views, and triggers.
 
-📌 Project Scope
+## 📌 Project Scope
 
 The database supports the core operations of a nutritional clinic, including:
 
@@ -22,7 +22,7 @@ The database supports the core operations of a nutritional clinic, including:
 
 The goal of this project is to showcase practical SQL skills, not just table creation.
 
-🧱 Database Structure
+## 🧱 Database Structure
 
 - Core Entities
 - Patient
@@ -33,12 +33,12 @@ The goal of this project is to showcase practical SQL skills, not just table cre
 
 All relationships are enforced using foreign keys, ensuring referential integrity.
 
-🛠️ Technologies
+## 🛠️ Technologies
 
 * Microsoft SQL Server
 * T-SQL
 
-▶️ Execution Order
+## ▶️ Execution Order
 
 To run the project from scratch, first enter database folder and then:
 
@@ -53,7 +53,7 @@ To run the project from scratch, first enter database folder and then:
 9. auditLog/02_add_audit_constraints.sql
 10. (Optional) tests/03_testing.sql
 
-🎯 Design Principles Applied
+## 🎯 Design Principles Applied
 
 * Separation of concerns (setup, schema, data, tests)
 * Defensive database design
@@ -61,7 +61,7 @@ To run the project from scratch, first enter database folder and then:
 * SQL Server best practices
 * Clean and readable scripts
 
-👤 Author 
+## 👤 Author 
 
 JD (Luishas)
 
