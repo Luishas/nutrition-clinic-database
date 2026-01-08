@@ -25,7 +25,3 @@ DEFAULT GETDATE() FOR payDate;
 ALTER TABLE Appointment
 ADD CONSTRAINT DF_Appointment_appointmentDate
 DEFAULT GETDATE() FOR appointmentDate;
-
-ALTER TABLE Payment
-ADD CONSTRAINT DF_Payment_payDate
-DEFAULT GETDATE() FOR payDate;
