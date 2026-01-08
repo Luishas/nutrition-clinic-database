@@ -41,8 +41,8 @@ VALUES
 --5. INSERT PAYMENTS
 INSERT INTO Payment(appointmentID, amount, payDate, payMethod, status)
 VALUES
-(1, 160.00, GETDATE(), 'Credit Card','Paid'),
-(2, 100.00, GETDATE(), 'Cash','Paid'),
-(3, 150.00, GETDATE(), 'Transfer','Paid'),
-(4, 130.00, GETDATE(), 'Card','Pending'),
+(1, 160.00, GETDATE(), 'Credit Card','Completed'),
+(2, 100.00, GETDATE(), 'Cash','Completed'),
+(3, 150.00, GETDATE(), 'Transfer','Completed'),
+(4, 130.00, GETDATE(), 'Credit Card','Pending'),
 (5, 110.00, GETDATE(), 'Cash','Pending');
