@@ -1,4 +1,4 @@
--- USE DB ALREADY CREATED
+-- USE DB ALREADY CREATED IN SETUP
 USE nutrition_clinic;
 GO
 
