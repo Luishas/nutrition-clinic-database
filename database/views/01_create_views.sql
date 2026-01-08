@@ -42,7 +42,7 @@ SELECT
     SUM(amount) AS totalRevenue
 FROM Payment
 WHERE status = 'Completed'
-GROUP BY YEAR(payDate), MOTH(payDate);
+GROUP BY YEAR(payDate), MONTH(payDate);
 GO
 
 -- APPOINTMENT HISTORY VIEW
@@ -51,10 +51,10 @@ SELECT
     a.appointmentID,
     a.appointmentDate,
     p.name + ' ' + p.lastName AS Patient,
-    n.name + ' ' + m.lastName AS Nutritionist,
+    n.name + ' ' + n.lastName AS Nutritionist,
     a.status
 FROM Appointment a 
-JOIN Patient p PN a.patientID = p.patientID
+JOIN Patient p ON a.patientID = p.patientID
 JOIN Nutritionist n ON a.nutritionistID = n.nutritionistID
 GO
 
