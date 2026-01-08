@@ -8,12 +8,12 @@ It demonstrates database design, data integrity, performance considerations, and
 
 The database supports the core operations of a nutritional clinic, including:
 
-• Patient management
-• Nutritionist management
-• Appointments scheduling
-• Nutrition plans
-• Payments and billing
-• Reporting and analytics
+* Patient management
+* Nutritionist management
+* Appointments scheduling
+* Nutrition plans
+* Payments and billing
+* Reporting and analytics
 
 The goal of this project is to showcase practical SQL skills, not just table creation.
 
@@ -48,13 +48,13 @@ To run the project from scratch:
 
 🎯 Design Principles Applied
 
-• Separation of concerns (setup, schema, data, tests)
-• Defensive database design
-• Real-world business logic
-• SQL Server best practices
-• Clean and readable scripts
+* Separation of concerns (setup, schema, data, tests)
+* Defensive database design
+* Real-world business logic
+* SQL Server best practices
+* Clean and readable scripts
 
 👤 Author 
 
 JD (Luishas)
-SQL Server • Backend • Data-Oriented Design
+* SQL Server • Backend • Data-Oriented Design
