@@ -42,3 +42,23 @@ BEGIN
     END
 END;
 GO
+
+-- TRIGGER TO AVOID WRONG DATES ON APPOINTMENTS
+CREATE TRIGGER trg_appointment_noPastDates
+ON Appointment
+AFTER INSERT, UPDATE
+AS 
+BEGIN
+    SET NOCOUNT ON;
+
+    IF EXISTS (
+        SELECT 1
+        FROM inserted i
+        WHERE appointmentDate < CAST(GETDATE() AS DATE)
+    )
+    BEGIN 
+        RAISERROR ('Appointment date cannot be in the past.',16,1);
+        ROLLBACK TRANSACTION;
+    END
+END;
+GO
