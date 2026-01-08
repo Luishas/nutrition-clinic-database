@@ -3,12 +3,12 @@
 IF NOT EXISTS (
     SELECT name
     FROM sys.databases
-    WHERE name ='nutritional_clinic'
+    WHERE name ='nutrition_clinic'
 )
 BEGIN
-    CREATE DATABASE nutritional_clinic;
+    CREATE DATABASE nutrition_clinic;
 END
 GO
 
-USE nutritional_clinic;
+USE nutrition_clinic;
 GO

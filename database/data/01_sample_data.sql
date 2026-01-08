@@ -1,7 +1,7 @@
 -- SAMPLE DATA TO USE FOR THE DB
 
 -- USE THE DB ALREADY CREATED
-USE nutritional_clinic;
+USE nutrition_clinic;
 GO
 
 -- PLEASE INSERT IN THE FOLLOWING ORDER:

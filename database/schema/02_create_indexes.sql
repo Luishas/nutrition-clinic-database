@@ -1,8 +1,8 @@
 -- USE THE DB ALREADY CREATED
-USE nutritional_clinic;
+USE nutrition_clinic;
 GO
 
--- INDEXES FOR CLINICAL NUTRITION
+-- INDEXES FOR NUTRITION CLINIC DB
 
 -- APPOINTMENTS: BY PATIENT
 CREATE INDEX idx_appointments_patientID

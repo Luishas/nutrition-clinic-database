@@ -1,5 +1,5 @@
 -- USE THE DB ALREADY CREATED
-USE nutritional_clinic;
+USE nutrition_clinic;
 GO
 
 -- CONSTRAINT TESTS
